@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #131633;
+    color: #34495e;
+    /* color: white; */
+    line-height: 1.5;
+}
+
+header {
+    grid-area: header;
+    /* background-color: dimgray; */
+}
+
+nav {
+    grid-area: nav;
+    /* background-color: darkviolet; */
+}
+
+#login {
+    grid-area: login;
+    /* background-color: red; */
+}
+
+#enhance_your_career {
+    grid-area: enhance_your_career;
+    /* background-color: blue; */
+}
+
+#important_stats {
+    grid-area: important_stats;
+    /* background-color: green; */
+}
+
+#build_apps {
+    grid-area: build_apps;
+    /* background-color: olive; */
+}
+
+#build_games {
+    grid-area: build_games;
+    /* background-color: chocolate; */
+}
+
+#build_websites {
+    grid-area: build_websites;
+    /* background-color: mediumaquamarine; */
+}
+
+header h1 {
+    font-size: 3.25em;
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px #22638e;
+}
+
+.options {
+    width: 95%;
+    background-color: white;
+    padding: 10px;
+    border-top: 3px solid #3498db;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.options-link {
+    text-decoration: none;
+    font-size: 0.9em;
+    color: #3498db;
+}
+
+.options-link:hover {
+    text-decoration: underline;
+    color: darkgreen;
+}
+
+.card {
+    background-color: white;
+}
+
+.card-blue {
+    background-color: #9ebcf5;
+}
+
+.card-title {
+    color: white;
+    background-color: #4f97d5;
+    font-size: 1.25em;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+    /* background-color: crimson; */
+    margin: 20px 0;
+    text-align: center;
+}
+
+@media screen and (min-width:1100px) {
+
+    main {
+        width: 90%;
+        max-width: 800px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 10vh 4vh 38vh 38vh 10vh;
+        grid-gap: 15px;
+        margin: 0 auto;
+    }
+
+    #container {
+        grid-template-areas:
+            "header header header"
+            "nav nav nav"
+            "login enhance_your_career important_stats"
+            "build_apps build_games build_websites"
+            "footer footer footer";
+    }
+}
+
+@media screen and (max-width:1100px) {
+
+    main {
+        width: 90%;
+        max-width: 800px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 10vh 4vh 25vh 25vh 25vh 10vh;
+        grid-gap: 15px;
+        margin: 0 auto;
+    }
+
+    #container {
+        grid-template-areas:
+            "header header"
+            "nav nav"
+            "login enhance_your_career"
+            "important_stats build_apps"
+            "build_games build_websites"
+            "footer footer";
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    main {
+        width: 90%;
+        max-width: 800px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 10vh 6vh 14vh 14vh 14vh 14vh 14vh 14vh 5vh;
+        grid-gap: 15px;
+        margin: 0 auto;
+    }
+
+    #container {
+        grid-template-areas:
+            "header"
+            "nav"
+            "login"
+            "enhance_your_career"
+            "important_stats"
+            "build_apps"
+            "build_games"
+            "build_websites"
+            "footer";
+    }
+}
